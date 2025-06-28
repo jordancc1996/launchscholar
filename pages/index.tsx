@@ -276,7 +276,7 @@ const Home: React.FC = () => {
                   key={service.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: service.delay }}
+                  transition={{ duration: 0.8, delay: service.delay || 0 }}
                   viewport={{ once: true }}
                   className="hover-lift cursor-pointer group"
                 >
