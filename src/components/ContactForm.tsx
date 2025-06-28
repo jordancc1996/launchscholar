@@ -52,12 +52,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
       service: value
     }))
     
-    if (errors.service) {
-      setErrors(prev => ({
-        ...prev,
-        service: undefined
-      }))
-    }
+if (errors.service) {
+  setErrors(prev => {
+    const { service, ...rest } = prev
+    return rest
+  })
+}
   }
 
   const validateForm = (): boolean => {
