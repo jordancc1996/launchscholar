@@ -11,7 +11,6 @@ const nextConfig = {
     unoptimized: true
   },
   experimental: {
-    appDir: false,
     typedRoutes: true
   },
   trailingSlash: false,
