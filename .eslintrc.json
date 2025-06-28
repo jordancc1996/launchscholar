@@ -1,10 +1,11 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "@typescript-eslint/recommended"
-  ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked"
+  ],
   "rules": {
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",
@@ -19,6 +20,7 @@
     "no-var": "error"
   },
   "parserOptions": {
+    "project": "./tsconfig.json",
     "ecmaVersion": 2021,
     "sourceType": "module",
     "ecmaFeatures": {
